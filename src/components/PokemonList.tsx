@@ -8,12 +8,12 @@ const PokemonList: React.FC = () => {
   const [pokemons, setPokemons] = React.useState<Pokemon[]>([]);
 
   React.useEffect(() => {
-    const fetchData = async () => {
+    const fetchInitData = async () => {
       const response = await fetch("api/pokemons");
       const data = await response.json();
       setPokemons(data);
     };
-    fetchData();
+    fetchInitData();
   }, []);
 
   return (
@@ -26,7 +26,10 @@ const PokemonList: React.FC = () => {
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {pokemons.map((pokemon) => (
-            <div key={pokemon.id} className="pokemon p-4 border rounded-lg">
+            <div
+              key={pokemon.id}
+              className="pokemon p-4 border rounded-lg shadow-md hover:shadow-lg"
+            >
               <Link href={`/pokemon/${[pokemon.id]}`}>
                 <Image
                   src={pokemon.sprites.front_default}
