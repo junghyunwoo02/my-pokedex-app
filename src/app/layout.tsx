@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="w-full h-[60px] bg-[white] text-center pt-[1rem]">
+      <body className={`${inter.className} bg-[#f0f0f0]`}>
+        <header className="w-full h-[60px] bg-[#6081d6] text-[#ede6e6] text-center pt-[1rem]">
           <h2 className="font-bold text-2xl">나만의 포켓몬 도감!</h2>
         </header>
-        <div className="bg-white">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

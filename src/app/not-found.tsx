@@ -12,16 +12,16 @@ const NotFoundPage = () => {
         width={500}
         height={500}
       />
-      <h2 className="font-bold mt-4 text-lg">
-        ⚠️원하시는 페이지를 찾을 수 없습니다.
-      </h2>
+      <h2 className="font-bold mt-4 text-lg">⚠️ 앗! 여긴 어디죠?</h2>
       <p className="text-center mt-4">
-        찾으려는 페이지의 주소가 잘못 입력되었거나,
-        <br /> 주소의 변경 혹은 삭제로 인해 사용하실 수 없습니다. <br />
-        입력하신 페이지의 주소가 정확한지 다시 한번 확인해 주세요.
+        아직 지구상에 존재하지 않는 주소를 미리 입력하셨군요!
+        <br />
+        피카츄가 말해주길, 아니면 요청하신 페이지의 주소가 변경, 삭제되어 찾을
+        수 없다네요. <br />
       </p>
+      <br />
       <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded">
-        뒤로 가기
+        메인으로
       </Link>
     </div>
   );
