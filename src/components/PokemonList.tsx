@@ -4,17 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import LoadingSpinner from "./LoadingSpinner";
+import { fetchInitData } from "@/apis/pokemon";
 
 const PokemonList: React.FC = () => {
   const [pokemons, setPokemons] = React.useState<Pokemon[]>([]);
 
   React.useEffect(() => {
-    const fetchInitData = async () => {
-      const response = await fetch("api/pokemons");
-      const data = await response.json();
+    const fetchdata = async () => {
+      const data = await fetchInitData();
       setPokemons(data);
     };
-    fetchInitData();
+    fetchdata();
   }, []);
 
   return (
